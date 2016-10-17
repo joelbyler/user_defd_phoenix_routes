@@ -1,0 +1,7 @@
+<%= form_for @conn, code_input_path(@conn, :load), [as: :load], fn f -> %>
+  <div class="form-group">
+    <%= label f, :code_text, "Edit or paste code here" %>
+    <%= textarea f, :code_text, class: "form-control", rows: 14 %>
+  </div>
+  <%= submit "Load", class: "btn btn-primary" %>
+<% end %>
